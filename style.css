@@ -1,0 +1,698 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.774),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url("dj.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+/* ------------ Navbar section ------------------ */
+nav {
+  position: fixed;
+  background: blue;
+  height: 70px;
+  width: 100%;
+  padding: 0 100px;
+  z-index: 100;
+}
+.logo {
+  height: 70px;
+  width: 70px;
+  align-self: center;
+  line-height: 120px;
+  /* border-radius: 50%; */
+}
+
+.logo > img {
+  height: 50px;
+  max-width: 60px;
+  border-radius: 50%;
+  line-height: 70px;
+  border: none;
+}
+
+nav ul {
+  float: right;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+nav ul li a {
+  font-weight: bold;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+nav ul li a.active{
+  color: white;
+  transition: 0.4s;
+  text-decoration: overline #fff 1px;
+}
+nav ul li a:hover:not(.res) {
+  color: aqua;
+  transition: 0.4s;
+}
+.btn {
+  background-color: blue;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  line-height: 30px;
+}
+.btn:active {
+  transform: translateY(2px);
+}
+.btn:hover {
+  border: 1px solid white;
+  background-color: transparent;
+  transition: 0.1ms;
+}
+.checkbtn {
+  color: blue;
+  float: right;
+  line-height: 70px;
+  cursor: pointer;
+  display: none;
+}
+.fa-bars {
+  font-size: 1em;
+}
+#check {
+  display: none;
+}
+/* ------------ Home section -------------------- */
+#home {
+  color: #fff;
+  padding: 180px 100px 0;
+  letter-spacing: 2px;
+  height: 100vh;
+}
+#home h1 {
+  font-size: 4.5em;
+  letter-spacing: 5px;
+  font-weight: 600;
+  text-shadow: 4px 4px 10px #000;
+}
+#home p {
+  font-size: 2.2em;
+  text-shadow: 4px 4px 10px #000;
+}
+#home h1::first-letter {
+  font-size: 1.2em;
+}
+.typing,
+.color {
+  font-size: 1em;
+  color: blue;
+}
+.resume-btn {
+  margin-top: 30px;
+  height: 60px;
+  line-height: 1.3em;
+  padding: 20px;
+}
+.resume-btn > a{
+  font-size: 1.4em;
+}
+/* ------------ About section ------------------- */
+#about {
+  /* height: 100vh; */
+  padding: 70px 100px;
+  background-color: black; 
+  color: #ffffffdc;
+}
+.about-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about-image {
+  flex-basis: 30%;
+}
+.about-image > img {
+  filter: brightness(90%);
+  width: 100%;
+  border-radius: 20px;
+}
+.responsive {
+  display: none;
+}
+.heading {
+  font-size: 3em;
+  color: white;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
+  /* text-decoration: underline 2px; */
+  letter-spacing: 2px;
+  z-index: 1000000;
+}
+.about-not-responsive{
+  text-decoration: none;
+  border-bottom: blue 2px solid;
+  margin: 20px 0;
+}
+.about-details {
+  flex-basis: 65%;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+.about-details>p{
+  margin-top: 40px;
+  font-size: 1em;
+}
+/* ------------ Skills section ------------------ */
+#skills {
+  background-color: black; 
+  padding: 70px 100px;
+}
+.skills {
+  /* background-color: #333; */
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.skills > div {
+  background-color: #585858;
+  margin-bottom: 20px;
+  height: 250px;
+  width: 350px;
+  padding: 20px 80px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 200ms;
+  border-radius: 10px;
+  cursor: pointer;
+  filter: grayscale(0.5);
+  transition: all 200ms ease-in-out;
+}
+.skills > div:hover {
+  background-color: blue;
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+.skills > div * {
+  margin: 5px;
+  font-size: 1em;
+}
+.skills > div img {
+  width: 50px;
+}
+/* ------------techstack & tools-------- */
+.sub-heading {
+  color: white;
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  text-decoration: underline 3px;
+  letter-spacing: 2px;
+}
+.techstack,
+.tools {
+  margin-top: 30px;
+}
+.techstack > div,
+.tools > div {
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.techstack > div img,
+.tools > div img {
+  width: 120px;
+}
+.lang-text {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+/* --------------project----------------- */
+#project {
+  padding: 70px 40px 30px;
+  text-align: center;
+  background-color: black;
+}
+.project-container {
+  /* background-color: #222; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+.project-content {
+  padding: 10px 27px;
+  margin: 0 40px;
+}
+.card {
+  min-width: 200px;
+  border-radius: 25px;
+  color: #000;
+  background-color: #585858;
+  padding: 2px;
+  filter: grayscale(0.2);
+  transition: all 200ms ease-in-out;
+}
+.card:hover {
+  background-color: #444;
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+.card-wrapper {
+  margin: 40px 0;
+}
+.card-image {
+  position: relative;
+  height: 200px;
+  max-width: 350px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+.card-image,
+.card-content {
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 5px;
+}
+.card-content {
+  padding: 10px 20px;
+}
+.name {
+  text-transform: capitalize;
+  color: white;
+  font-size: 2em;
+  font-weight: 400;
+  text-shadow: 2px 2px 5px #000;
+}
+.details {
+  font-size: 1em;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-shadow: 1px 1px 5px #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+b {
+  color: aqua;
+  font-weight: 600;
+}
+.repo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.silde-btn {
+  color: blue;
+}
+.silde-btn:hover {
+  color: blue;
+}
+.swiper-button-next::before,
+.swiper-button-next::after,
+.swiper-button-prev::before,
+.swiper-button-prev::after {
+  font-size: 2.5em;
+}
+.swiper-pagination-bullet {
+  background-color: blue;
+  opacity: 40%;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: blue;
+  opacity: 1;
+}
+/* -------------contact--------------- */
+#contact {
+  /* background-color: #333; */
+  background-color: black;
+  padding: 70px 100px;
+}
+.contact-container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-container h4 {
+  font-size: 1.8em;
+  padding-bottom: 10px;
+  letter-spacing: 5px;
+}
+.get-in{
+  text-decoration: none;
+}
+.fa-brands,
+.fa-solid,
+.fa-envelope {
+  font-size: 1em;
+  margin-bottom: 40px;
+  transition: all 200ms ease-in-out;
+}
+.fa-brands:hover,
+.fa-solid:hover,
+.fa-envelope:hover {
+  color: blue;
+  transform: scale(1.2);
+}
+.contact-icon {
+  font-size: 1.3em;
+}
+.fa-brands {
+  font-size: 2em;
+}
+.icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ----------------thank you------------ */
+
+
+.fa-heart {
+  color: #fff;
+}
+/* -----------responsive----------- */
+@media (max-width: 952px) {
+  /* ---------------for all-------------- */
+  
+  * {
+    font-size: 12px;
+  }
+  /* -------------------navbar-------------- */
+  nav {
+    padding: 0 50px;
+  }
+  nav ul li a{
+    font-size: 1.2em;
+  }
+  .logo {
+    height: 50px;
+    width: 50px;
+    align-self: center;
+    line-height: 110px;
+    border-radius: 50%;
+  }
+  .logo > img {
+    max-width: 50px;
+    border-radius: 50%;
+    border: blue 2px solid;
+  }
+  /* ---------------home-------------- */
+  #home {
+    padding: 180px 50px 0;
+  
+  }
+  .resume-btn {
+    height: 60px;
+    padding: 10px 50px;
+  }
+  .resume-btn > a {
+    font-size: 25px;
+  }
+  
+/* ------------ About section ------------------- */
+#about{
+    padding: 70px 50px;
+}
+/* ------------ Skills section ------------------ */
+#skills{
+  padding: 70px 50px;
+}
+.skills{
+  flex-direction: column;
+}
+.skills > div *{
+  font-size: 1.4em;
+}
+/* ------------techstack & tools-------- */
+.techstack > div img,
+.tools > div img {
+  width: 100px;
+}
+.tools > div{
+  justify-content: space-evenly;
+}
+.lang-text{
+  font-size: 1.4em;
+}
+/* --------------project----------------- */
+#project {
+  padding: 70px 0 30px;
+}
+.name{
+  font-size: 2.2em;
+}
+.details{
+  font-size: 1.3em;
+}
+.repo button a{
+  font-size: 1.3em;
+}
+/* -------------contact--------------- */
+#contact{
+  padding: 70px 50px;
+}
+.contact-container h4 {
+  font-size: 1.8em;
+}
+.fa-brands,
+.fa-solid,
+.fa-envelope {
+  font-size: 1em;
+}
+.contact-icon {
+  font-size: 1.3em;
+}
+.fa-brands {
+  font-size: 2em;
+}
+/* ----------------thank you------------ */
+footer{
+  font-size: 1.2em;
+}
+}
+@media (max-width: 768px) {
+   /* ---------------for all-------------- */
+  *{
+    font-size: 10px;
+  }
+  body {
+    background-image: linear-gradient(
+        to right,
+        rgb(0, 0, 0),
+        rgba(0, 0, 0),
+        rgba(0, 0, 0, 0.507),
+        rgba(255, 255, 255, 0)
+      ),
+      url("Whats\ Image.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+/* ---------------navbar-------------- */
+  .checkbtn {
+    font-size: 30px;
+    display: block;
+    color: blue;
+  }
+  nav{
+    padding: 0 30px;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #585858;
+    top: 65px;
+    right: -100%;
+    text-align: center;
+    transition: all 200ms;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 2em;
+  }
+  nav ul li a.active{
+  text-decoration: underline #fff 2px;
+}
+  nav ul li .btn{
+    height: 60px;
+    padding: 10px 50px;
+  }
+  #check:checked ~ ul {
+    right: 0;
+  }
+    /* ---------------home-------------- */
+  #home {
+    padding: 200px 30px 0;
+  }
+  .resume-btn {
+    height: 50px;
+    padding: 10px 20px;
+  }
+  .resume-btn > a {
+    font-size: 20px;
+  }
+  #home h1{
+    font-size: 3.8em;
+  }
+  #home p{
+    font-size: 1.8em;
+  }
+  
+/* ------------ About section ------------------- */
+#about{
+    padding: 70px 50px;
+}
+.responsive {
+  display: block;
+}
+.about-not-responsive {
+  display: none;
+}
+.about-container{
+  flex-direction: column;
+  align-items: center;
+}
+.about-image {
+  max-width: 200px;
+}
+.about-image > img {
+  filter: brightness(90%);
+  width: 100%;
+  border-radius: 20px;
+}
+.about-details{
+  max-width: 550px;
+}
+.about-details > p{
+  font-size: 1.4em;
+}
+/* ------------ Skills section ------------------ */
+#skills{
+  padding: 70px 30px;
+}
+.skills{
+  flex-direction: column;
+}
+.skills > div *{
+  font-size: 1.8em;
+}
+/* ------------techstack & tools-------- */
+.techstack > div img,
+.tools > div img {
+  width: 100px;
+}
+.tools > div img{
+  width: 70px;
+}
+.techstack > div{
+  margin: auto;
+  justify-content: flex-start;
+}
+.techstack > div >div{
+  margin: 10px;
+}
+.tools > div{
+  margin: auto;
+  justify-content: space-evenly;
+}
+.lang-text{
+  font-size: 1.6em;
+}
+/* --------------project----------------- */
+#project {
+  padding: 70px 0 30px;
+}
+.name{
+  font-size: 2.3em;
+}
+.details{
+  font-size: 1.5em;
+}
+.repo button a{
+  font-size: 1.4em;
+}
+.card-image {
+  height: 150px;
+  max-width: 350px;
+}
+/* -------------contact--------------- */
+#contact{
+  padding: 70px 30px;
+}
+.contact-container{
+  justify-content: center;
+}
+.contact-container h4 {
+  font-size: 1.8em;
+}
+.fa-brands,
+.fa-solid,
+.fa-envelope {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.contact-icon {
+  font-size: 2em;
+}
+.fa-brands {
+  font-size: 1.8em;
+}
+/* ----------------thank you------------ */
+
+}
