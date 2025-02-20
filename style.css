@@ -7,7 +7,7 @@ body {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    url("dj.jpg");
+    url("first-1.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -534,7 +534,7 @@ footer{
         rgba(0, 0, 0, 0.507),
         rgba(255, 255, 255, 0)
       ),
-      url("Whats\ Image.jpg");
+      url("first-1.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
